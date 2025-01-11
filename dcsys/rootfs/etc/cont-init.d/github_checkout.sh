@@ -3,7 +3,7 @@
 # ==============================================================================
 # SSH Host keys
 # ==============================================================================
-readonly GITHUB_PATH=/data
+readonly GITHUB_PATH=/share
 declare github_repository
 
 github_repository=$(bashio::config 'github_repository')
