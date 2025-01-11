@@ -20,4 +20,4 @@ schema:
   ha_hostname: "str?"
   fluvius_hostname: "str?"
   inverter_hostname: "str?"
-#image: "github.com/users/Jorre05/packages/container/package/{arch}-dcsys-tools"
+image: "ghcr.io/jorre05/{arch}-dcsys-tools"
