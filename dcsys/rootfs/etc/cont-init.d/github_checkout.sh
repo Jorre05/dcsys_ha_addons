@@ -3,17 +3,17 @@
 # ==============================================================================
 # SSH Host keys
 # ==============================================================================
-readonly GITHUB_PATH=/share
 declare github_repository
+declare dcsys_config_root_dir
 
 github_repository=$(bashio::config 'github_repository')
+dcsys_config_root_dir=$(bashio::config 'dcsys_config_root_dir')
 bashio::log.info  "GitHeb Checkout from ${github_repository} to ${GITHUB_PATH}"
 
-if [ ! -d ${GITHUB_PATH}/dcsys_ha_config ]; then
+if [ ! -d ${dcsys_config_root_dir} ]; then
     bashio::log.info "DCSys configuratie is er niet, GIT checkout"
-    cd ${GITHUB_PATH}
-    git clone ${github_repository}
+    git clone ${github_repository} ${dcsys_config_root_dir}
 else
-    cd ${GITHUB_PATH}
+    cd ${dcsys_config_root_dir}
     git pull
 fi
