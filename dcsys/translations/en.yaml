@@ -1,4 +1,6 @@
 configuration:
+  github_repository:
+    name: GitHub repository met de DCSys binaries en configuraties (gedeeld met alle DCSys add-ons)
   ha_hostname:
     name: Home assistant hostname
   fluvius_hostname:
