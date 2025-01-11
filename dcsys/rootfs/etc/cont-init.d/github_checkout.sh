@@ -9,5 +9,5 @@ declare github_repository
 github_repository=$(bashio::config 'github_repository')
 bashio::log.info  "GitHeb Checkout from ${github_repository} to ${GITHUB_PATH}"
 cd ${GITHUB_PATH}
-git checkout ${github_repository}
+git clone ${github_repository}
 
