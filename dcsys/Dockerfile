@@ -8,7 +8,6 @@ RUN curl -sSLf -o /usr/bin/tempio "https://github.com/home-assistant/tempio/rele
 
 RUN apk add --no-cache python3 py-pip
 RUN apk add py3-websockets
-RUN pip install websockets
 RUN apk add wget
 RUN apk add libc6-compat
 RUN apk add libpthread-stubs
