@@ -1,0 +1,29 @@
+#!/usr/bin/with-contenv bashio
+# shellcheck disable=SC1008
+# ==============================================================================
+# Start bind
+# s6-overlay docs: https://github.com/just-containers/s6-overlay
+# ==============================================================================
+
+if [ ! -d /data/cache ]; then
+    bashio::log.info "Creating cache folder"
+    mkdir -p /data/cache
+    chown named:named /data/cache
+    chmod 755 /data/cache
+fi
+
+if [ ! -f /config/named.conf ]; then
+    bashio::log.info "Creating default named.conf"
+    cp /etc/named.conf /config/named.conf
+    chmod 644 /config/named.conf
+fi
+
+if [ ! -d /config/zones ]; then
+    bashio::log.info "Creating zones folder"
+    mkdir -p /config/zones
+    chown named:named /config/zones
+    chmod 755 /config/zones
+fi
+
+## Run your program
+exec /usr/sbin/named -g -c /config/named.conf -u named

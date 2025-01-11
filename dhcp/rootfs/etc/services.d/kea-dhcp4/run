@@ -1,0 +1,24 @@
+#!/usr/bin/with-contenv bashio
+# shellcheck disable=SC1008
+# ==============================================================================
+# Start dhcpd
+# s6-overlay docs: https://github.com/just-containers/s6-overlay
+# ==============================================================================
+
+
+if [ ! -f /config/kea-dhcp4.conf ]; then
+    bashio::log.info "Creating default kea.conf"
+    cp /etc/kea/kea-dhcp4.conf /config/kea-dhcp4.conf
+    chmod 644 /config/kea-dhcp4.conf
+fi
+
+if [ ! -d /run/kea ]; then
+    bashio::log.info "Creating key run folder"
+    mkdir -p /run/kea
+    chown kea:kea /run/kea
+    chmod 755 /run/kea
+fi
+bashio::log.info "Starting kea-dhcp4"
+## Run your program
+exec /usr/sbin/kea-dhcp4 -c /config/kea-dhcp4.conf
+bashio::log.info "Voorbij Kea start stuff"

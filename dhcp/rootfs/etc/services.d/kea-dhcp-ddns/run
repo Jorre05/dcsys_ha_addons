@@ -1,0 +1,25 @@
+#!/usr/bin/with-contenv bashio
+# shellcheck disable=SC1008
+# ==============================================================================
+# Start dhcpd
+# s6-overlay docs: https://github.com/just-containers/s6-overlay
+# ==============================================================================
+
+
+if [ ! -f /config/kea-dhcp-ddns.conf ]; then
+    bashio::log.info "Creating default kea-dhcp-ddns.conf"
+    cp /etc/kea/kea-dhcp-ddns.conf /config/kea-dhcp-ddns.conf
+    chmod 644 /config/kea-dhcp-ddns.conf
+fi
+
+if [ ! -d /run/kea ]; then
+    bashio::log.info "Creating kea run folder"
+    mkdir -p /run/kea
+    chown kea:kea /run/kea
+    chmod 755 /run/kea
+fi
+
+bashio::log.info "Starting kea-dhcp-ddns"
+## Run your program
+exec /usr/sbin/kea-dhcp-ddns -c /config/kea-dhcp-ddns.conf
+bashio::log.info "Voorbij kea-dhcp-ddns start stuff"

@@ -1,0 +1,4 @@
+# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
+name: DCSys Home Assistant add-ons
+url: 'https://github.com/Jorre05/dcsys_ha_addons'
+maintainer: Joris Struyve <joris@struyve.be>

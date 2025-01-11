@@ -1,0 +1,16 @@
+name: "DHCP Server"
+version: "1.0.0"
+slug: "dns-dhcp"
+description: "Home Assistant DHCP add-on"
+url: "https://github.com/Jorre05/dcsys_ha_addons"
+arch:
+  - aarch64
+  - amd64
+init: false
+startup: system
+host_network: true
+map:
+  - addon_config:rw 
+  - share:rw
+backup_exclude:
+  - '*/cache'

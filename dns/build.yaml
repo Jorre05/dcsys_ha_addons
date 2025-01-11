@@ -1,0 +1,10 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
+build_from:
+  aarch64: "ghcr.io/home-assistant/aarch64-base:latest"
+  amd64: "ghcr.io/home-assistant/amd64-base:latest"
+labels:
+  org.opencontainers.image.title: "Home Assistant DNS-DHCP Add-on"
+  org.opencontainers.image.description: "DNS-DHCP server"
+  org.opencontainers.image.source: "https://github.com/Jorre05/ha_dns_dhcp_addon"
+args:
+  TEMPIO_VERSION: "2021.09.0"

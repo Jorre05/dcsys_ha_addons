@@ -1,0 +1,16 @@
+name: "DNS-DHCP Server"
+version: "1.0.0"
+slug: "dcsy-dns"
+description: "Home Assistant DNS add-on"
+url: "https://github.com/Jorre05/dcsys_ha_addons"
+arch:
+  - aarch64
+  - amd64
+init: false
+startup: system
+host_network: true
+map:
+  - addon_config:rw 
+  - share:rw
+backup_exclude:
+  - '*/cache'

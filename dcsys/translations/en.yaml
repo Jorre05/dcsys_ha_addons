@@ -1,0 +1,7 @@
+configuration:
+  ha_hostname:
+    name: Home assistant hostname
+  fluvius_hostname:
+    name: Fluvius smart meter hostname
+  inverter_hostname:
+    name: Inverter hostname
