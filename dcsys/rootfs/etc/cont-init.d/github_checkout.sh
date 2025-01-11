@@ -18,3 +18,5 @@ else
     cd ${dcsys_config_root_dir}
     git pull
 fi
+
+cp ${dcsys_config_root_dir}/dcsys /etc
