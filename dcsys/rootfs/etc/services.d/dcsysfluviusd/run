@@ -9,11 +9,13 @@
 # Declare variables
 declare message
 declare ha_hostname
+declare dcsys_config_root_dir
 
 ## Get the user config options.
 fluvius_hostname=$(bashio::config 'fluvius_hostname')
+dcsys_config_root_dir=$(bashio::config 'dcsys_config_root_dir')
 bashio::log.info "${fluvius_hostname:="fluvius.struyve.lan"}"
 
 #exec /usr/bin/my_program
-export DCSYSROOT=/etc/dcsys
+export DCSYSROOT=${dcsys_config_root_dir}/dcsys
 $DCSYSROOT/bin/dcsysfluviusd -h ${fluvius_hostname} -l /share/dcsysfluviusd.log
