@@ -13,10 +13,7 @@ if [ ! -d ${GITHUB_PATH}/dcsys_ha_config ]; then
     bashio::log.info "DCSys configuratie is er niet, GIT checkout"
     cd ${GITHUB_PATH}
     git clone ${github_repository}
+else
+    cd ${GITHUB_PATH}
+    git pull
 fi
-
-# DCSys stuffies moeten in /etc
-cp ${GITHUB_PATH}/dcsys_ha_config/dcsys /etc
-
-
-
