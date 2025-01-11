@@ -1,4 +1,4 @@
-name: "DHCP Server"
+name: "DCSys DHCP Server"
 version: "1.0.0"
 slug: "dns-dhcp"
 description: "Home Assistant DHCP add-on"
@@ -14,3 +14,7 @@ map:
   - share:rw
 backup_exclude:
   - '*/cache'
+options:
+  github_repository: ""
+schema:
+  github_repository: "str?"

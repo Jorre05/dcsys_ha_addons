@@ -1,8 +1,8 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
-name: DCSys add-on
+name: DCSys Tools add-on
 version: "1.0.0"
-slug: dcsys
-description: DCSys add-on
+slug: dcsys-tools
+description: DCSys tools add-on
 url: "https://github.com/Jorre05/dcsys_ha_addons"
 arch:
   - aarch64
@@ -10,10 +10,12 @@ init: false
 map:
   - share:rw
 options:
+  github_repository: ""
   ha_hostname: "dcsys.struyve.lan"
   fluvius_hostname: "fluvius.struyve.lan"
   inverter_hostname: "inverter.struyve.lan"
 schema:
+  github_repository: "str?"
   ha_hostname: "str?"
   fluvius_hostname: "str?"
   inverter_hostname: "str?"
