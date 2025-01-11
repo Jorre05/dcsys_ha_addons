@@ -3,9 +3,10 @@ name: DCSys Tools add-on
 version: "1.0.0"
 slug: dcsys-tools
 description: DCSys tools add-on
-url: "https://github.com/Jorre05/dcsys_ha_addons"
+url: "https://github.com/Jorre05/dcsys_ha_addons/tree/main/dcsys"
 arch:
   - aarch64
+  - amd64
 init: false
 map:
   - share:rw
@@ -19,4 +20,4 @@ schema:
   ha_hostname: "str?"
   fluvius_hostname: "str?"
   inverter_hostname: "str?"
-#image: "ghcr.io/home-assistant/{arch}-addon-dcsys"
+image: "ghcr.io/jorre05/{arch}-dcsys-tools"
