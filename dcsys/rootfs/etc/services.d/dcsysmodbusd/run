@@ -9,11 +9,13 @@
 # Declare variables
 declare message
 declare ha_hostname
+declare dcsys_config_root_dir
 
 ## Get the user config options.
 inverter_hostname=$(bashio::config 'inverter_hostname')
+dcsys_config_root_dir=$(bashio::config 'dcsys_config_root_dir')
 bashio::log.info "${inverter_hostname:="inverter.struyve.lan"}"
 
 #exec /usr/bin/my_program
-export DCSYSROOT=/etc/dcsys
+export DCSYSROOT=${dcsys_config_root_dir}/dcsys
 $DCSYSROOT/bin/dcsysmodbusd -h ${inverter_hostname} -s 1 -l /share/dcsysmodbusd.log
