@@ -7,7 +7,6 @@ ARG TEMPIO_VERSION BUILD_ARCH
 RUN curl -sSLf -o /usr/bin/tempio "https://github.com/home-assistant/tempio/releases/download/${TEMPIO_VERSION}/tempio_${BUILD_ARCH}"
 
 RUN apk add --no-cache python3 py-pip
-RUN ln -s /usr/bin/python3 /usr/bin/python
 RUN pip install websockets
 RUN apk add wget
 RUN apk add libc6-compat
