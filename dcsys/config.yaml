@@ -1,7 +1,7 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: DCSys Tools add-on
 version: "1.0.0"
-slug: dcsys-tools
+slug: dcsys
 description: DCSys tools add-on
 url: "https://github.com/Jorre05/dcsys_ha_addons/tree/main/dcsys"
 arch:
@@ -20,4 +20,4 @@ schema:
   ha_hostname: "str?"
   fluvius_hostname: "str?"
   inverter_hostname: "str?"
-image: "github.com/users/Jorre05/packages/container/package/{arch}-dcsys-tools"
+#image: "github.com/users/Jorre05/packages/container/package/{arch}-dcsys-tools"
