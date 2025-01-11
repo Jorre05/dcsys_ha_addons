@@ -18,3 +18,4 @@ options:
   github_repository: ""
 schema:
   github_repository: "str?"
+image: "ghcr.io/jorre05/{arch}-dcsys-dns"
