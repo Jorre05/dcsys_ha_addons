@@ -19,4 +19,4 @@ else
     git pull
 fi
 
-cp ${dcsys_config_root_dir}/dcsys /etc
+cp -frp ${dcsys_config_root_dir}/dcsys /etc
