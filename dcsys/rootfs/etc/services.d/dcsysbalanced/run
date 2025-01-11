@@ -9,11 +9,13 @@
 # Declare variables
 declare message
 declare ha_hostname
+declare dcsys_config_root_dir
 
 ## Get the user config options.
 ha_hostname=$(bashio::config 'ha_hostname')
+dcsys_config_root_dir=$(bashio::config 'dcsys_config_root_dir')
 bashio::log.info "${ha_hostname:="dcsys.struyve.lan"}"
 
 #exec /usr/bin/my_program
-export DCSYSROOT=/etc/dcsys
+export DCSYSROOT=${dcsys_config_root_dir}/dcsys
 $DCSYSROOT/bin/dcsysbalanced -s 3 -l /share/dcsysbalanced.log
