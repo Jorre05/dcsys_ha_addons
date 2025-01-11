@@ -6,13 +6,17 @@
 readonly GITHUB_PATH=/share
 declare github_repository
 
+github_repository=$(bashio::config 'github_repository')
+bashio::log.info  "GitHeb Checkout from ${github_repository} to ${GITHUB_PATH}"
+
 if [ ! -d ${GITHUB_PATH}/dcsys_ha_config ]; then
     bashio::log.info "DCSys configuratie is er niet, GIT checkout"
     cd ${GITHUB_PATH}
     git clone ${github_repository}
 fi
 
-github_repository=$(bashio::config 'github_repository')
-bashio::log.info  "GitHeb Checkout from ${github_repository} to ${GITHUB_PATH}"
+# DCSys stuffies moeten in /etc
+cp ${GITHUB_PATH}/dcsys_ha_config/dcsys /etc
+
 
 
