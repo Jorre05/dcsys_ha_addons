@@ -3,16 +3,20 @@
 # ==============================================================================
 # SSH Host keys
 # ==============================================================================
-readonly GITHUB_PATH=/data/dcsys_github
 declare github_repository
+declare dcsys_config_root_dir
 
-if ! bashio::fs.directory_exists "${GITHUB_PATH}"; then
-    bashio::log.info "GitHub pad maken..."
+github_repository=$(bashio::config 'github_repository')
+dcsys_config_root_dir=$(bashio::config 'dcsys_config_root_dir')
+bashio::log.info  "GitHub Checkout from ${github_repository} to ${dcsys_config_root_dir}"
 
-    mkdir -p "${GITHUB_PATH}"
+if [ ! -d ${dcsys_config_root_dir} ]; then
+    bashio::log.info "DCSys configuratie is er niet, GIT clone"
+    git clone ${github_repository} ${dcsys_config_root_dir}
+else
+    bashio::log.info "DCSys configuratie is er, GIT pull"
+    cd ${dcsys_config_root_dir}
+    git pull | true
 fi
 
-bashio::log.info  "GitHeb Checkout from ${github_repository} to ${GITHUB_PATH}"
-cd ${GITHUB_PATH}
-git checkout ${github_repository}
-
+cp -frp ${dcsys_config_root_dir}/dns/* /config

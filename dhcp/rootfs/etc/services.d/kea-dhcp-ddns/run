@@ -5,13 +5,6 @@
 # s6-overlay docs: https://github.com/just-containers/s6-overlay
 # ==============================================================================
 
-
-if [ ! -f /config/kea-dhcp-ddns.conf ]; then
-    bashio::log.info "Creating default kea-dhcp-ddns.conf"
-    cp /etc/kea/kea-dhcp-ddns.conf /config/kea-dhcp-ddns.conf
-    chmod 644 /config/kea-dhcp-ddns.conf
-fi
-
 if [ ! -d /run/kea ]; then
     bashio::log.info "Creating kea run folder"
     mkdir -p /run/kea
