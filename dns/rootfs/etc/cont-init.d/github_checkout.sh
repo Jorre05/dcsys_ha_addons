@@ -21,3 +21,4 @@ fi
 
 cp -frp ${dcsys_config_root_dir}/dns/* /config
 chmod 755 /config/zones
+chown named:named /config/zones
