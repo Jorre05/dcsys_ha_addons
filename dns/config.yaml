@@ -16,6 +16,8 @@ backup_exclude:
   - '*/cache'
 options:
   github_repository: ""
+  dcsys_config_root_dir: "/share/dcsys_ha_config"
 schema:
   github_repository: "str?"
+  dcsys_config_root_dir: "str?"
 image: "ghcr.io/jorre05/{arch}-dcsys-dns"
