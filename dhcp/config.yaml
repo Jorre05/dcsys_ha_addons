@@ -1,6 +1,6 @@
 name: "DCSys DHCP Server"
-version: "1.0.1"
-slug: "dns-dhcp"
+version: "1.0.2"
+slug: "dcsys-dhcp"
 description: "Home Assistant DHCP add-on"
 url: "https://github.com/Jorre05/dcsys_ha_addons"
 arch:
