@@ -16,7 +16,7 @@ if [ ! -d ${dcsys_config_root_dir} ]; then
 else
     bashio::log.info "DCSys configuratie is er, GIT pull"
     cd ${dcsys_config_root_dir}
-    git pull | true
+    git pull
 fi
 
 cp -frp ${dcsys_config_root_dir}/dcsys /etc
