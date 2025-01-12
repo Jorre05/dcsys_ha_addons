@@ -20,5 +20,5 @@ else
 fi
 
 cp -frp ${dcsys_config_root_dir}/dns/* /config
-chmod 755 /config/zones
-chown named:named /config/zones
+chmod -R 755 /config/zones
+chown -R named:named /config/zones
