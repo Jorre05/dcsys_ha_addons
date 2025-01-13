@@ -12,6 +12,7 @@ RUN apk add wget
 RUN apk add libc6-compat
 RUN apk add libmodbus
 RUN apk add git
+RUN apk add mutt
 
 # Copy root filesystem
 COPY rootfs /
