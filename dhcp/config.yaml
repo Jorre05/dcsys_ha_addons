@@ -1,5 +1,5 @@
 name: "DCSys DHCP Server"
-version: "1.0.2"
+version: "1.0.3"
 slug: "dcsys-dhcp"
 description: "Home Assistant DHCP add-on"
 url: "https://github.com/Jorre05/dcsys_ha_addons"
@@ -17,7 +17,11 @@ backup_exclude:
 options:
   github_repository: ""
   dcsys_config_root_dir: "/share/dcsys_ha_config"
+  listen_on: ""
+  dns_servers: ""
 schema:
   github_repository: "str?"
   dcsys_config_root_dir: "str?"
+  listen_on: "str?"
+  dns_servers: "str?"
 image: "ghcr.io/jorre05/{arch}-dcsys-dhcp"
