@@ -23,5 +23,6 @@ fi
 
 cp -frp ${dcsys_config_root_dir}/dns/* /config
 sed "s/#LISTEN_ON#/${listen_on}/g" /config/named.conf -i
+
 chmod -R 755 /config/zones
 chown -R named:named /config/zones
