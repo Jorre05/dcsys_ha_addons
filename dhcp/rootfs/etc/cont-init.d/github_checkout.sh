@@ -5,8 +5,12 @@
 # ==============================================================================
 declare github_repository
 declare dcsys_config_root_dir
+declare listen_on
+declare dns_servers
 
 github_repository=$(bashio::config 'github_repository')
+listen_on=$(bashio::config 'listen_on')
+dns_servers=$(bashio::config 'dns_servers')
 dcsys_config_root_dir=$(bashio::config 'dcsys_config_root_dir')
 bashio::log.info  "GitHub Checkout from ${github_repository} to ${dcsys_config_root_dir}"
 
@@ -20,3 +24,5 @@ else
 fi
 
 cp -frp ${dcsys_config_root_dir}/dhcp/* /config
+sed "s/#LISTEN_ON#/${listen_on}/g" /config/kea-dhcp4.conf -i
+sed "s/#DNS_SERVERS#/${dns_servers}/g" /config/kea-dhcp4.conf -i
