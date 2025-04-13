@@ -10,14 +10,14 @@
 declare message
 declare ha_hostname
 declare dcsys_config_root_dir
-declare extra_args
+declare dcsysbalanced_args
 
 ## Get the user config options.
 ha_hostname=$(bashio::config 'ha_hostname')
-extra_args=$(bashio::config 'extra_args')
+dcsysbalanced_args=$(bashio::config 'dcsysbalanced_args')
 dcsys_config_root_dir=$(bashio::config 'dcsys_config_root_dir')
 bashio::log.info "${ha_hostname:="dcsys.struyve.lan"}"
 
 #exec /usr/bin/my_program
 export DCSYSROOT=${dcsys_config_root_dir}/dcsys
-$DCSYSROOT/bin/dcsysbalanced ${extra_args}
+$DCSYSROOT/bin/dcsysbalanced ${dcsysbalanced_args}
