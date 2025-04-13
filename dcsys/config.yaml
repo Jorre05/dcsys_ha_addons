@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: DCSys Tools add-on
-version: "1.0.9"
+version: "1.0.10"
 slug: "dcsys-tools"
 description: DCSys tools add-on
 url: "https://github.com/Jorre05/dcsys_ha_addons/tree/main/dcsys"
