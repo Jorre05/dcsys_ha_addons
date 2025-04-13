@@ -19,7 +19,7 @@ options:
   inverter_hostname: "inverter.struyve.lan"
   dcsysbalanced_args: "-s 3 -v 2"
   dcsysfluvuisd_args: ""
-  dcsysmodbusd_args: ""
+  dcsysmodbusd_args: "-s 1 -l /share/dcsysmodbusd.log"
 schema:
   github_repository: "str?"
   dcsys_config_root_dir: "str?"
