@@ -10,9 +10,11 @@
 declare message
 declare ha_hostname
 declare dcsys_config_root_dir
+declare extra_args
 
 ## Get the user config options.
 ha_hostname=$(bashio::config 'ha_hostname')
+extra_args=$(bashio::config 'extra_args')
 dcsys_config_root_dir=$(bashio::config 'dcsys_config_root_dir')
 bashio::log.info "${ha_hostname:="dcsys.struyve.lan"}"
 
