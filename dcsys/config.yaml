@@ -18,7 +18,7 @@ options:
   fluvius_hostname: "fluvius.struyve.lan"
   inverter_hostname: "inverter.struyve.lan"
   dcsysbalanced_args: "-s 3 -v 2"
-  dcsysfluvuisd_args: ""
+  dcsysfluvuisd_args: "-l /share/dcsysfluviusd.log"
   dcsysmodbusd_args: "-s 1 -l /share/dcsysmodbusd.log"
 schema:
   github_repository: "str?"
