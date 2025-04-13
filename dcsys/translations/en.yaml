@@ -9,3 +9,5 @@ configuration:
     name: Fluvius smart meter hostname
   inverter_hostname:
     name: Inverter hostname
+  dcsysbalanced_extra_args:
+    name: dcsysbalanced extra argumenten
