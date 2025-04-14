@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: DCSys Tools add-on
-version: "1.0.13"
+version: "1.0.14"
 slug: "dcsys-tools"
 description: DCSys tools add-on
 url: "https://github.com/Jorre05/dcsys_ha_addons/tree/main/dcsys"
@@ -18,7 +18,7 @@ options:
   fluvius_hostname: "fluvius.struyve.lan"
   inverter_hostname: "inverter.struyve.lan"
   dcsysbalanced_args: "-s 3 -v 2"
-  dcsysfluvuisd_args: "-v 2"
+  dcsysfluviusd_args: "-v 2"
   dcsysmodbusd_args: "-s 1 -v 2"
 schema:
   github_repository: "str?"
@@ -27,6 +27,6 @@ schema:
   fluvius_hostname: "str?"
   inverter_hostname: "str?"
   dcsysbalanced_args: "str?"
-  dcsysfluvuisd_args: "str?"
+  dcsysfluviusd_args: "str?"
   dcsysmodbusd_args: "str?"
 image: "ghcr.io/jorre05/{arch}-dcsys-tools"
