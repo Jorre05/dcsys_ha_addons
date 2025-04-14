@@ -10,6 +10,8 @@ github_repository=$(bashio::config 'github_repository')
 dcsys_config_root_dir=$(bashio::config 'dcsys_config_root_dir')
 bashio::log.info  "GitHub Checkout from ${github_repository} to ${dcsys_config_root_dir}"
 
+cd ${dcsys_config_root_dir}
+rm -fr *
 if [ ! -d ${dcsys_config_root_dir} ]; then
     bashio::log.info "DCSys configuratie is er niet, GIT clone"
     git clone ${github_repository} ${dcsys_config_root_dir}
