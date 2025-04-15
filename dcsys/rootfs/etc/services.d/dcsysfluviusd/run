@@ -12,7 +12,7 @@ declare dcsysfluvuisd_args
 
 ## Get the user config options.
 fluvius_hostname=$(bashio::config 'fluvius_hostname')
-dcsysfluviusd_args=$(bashio::config 'dcsysfluvuisd_args')
+dcsysfluviusd_args=$(bashio::config 'dcsysfluviusd_args')
 dcsys_config_root_dir=$(bashio::config 'dcsys_config_root_dir')
 bashio::log.info "${fluvius_hostname:="fluvius.struyve.lan"}"
 
