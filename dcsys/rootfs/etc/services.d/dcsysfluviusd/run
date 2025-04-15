@@ -18,4 +18,5 @@ bashio::log.info "${fluvius_hostname:="fluvius.struyve.lan"}"
 
 #exec /usr/bin/my_program
 export DCSYSROOT=/etc/dcsys
+bashio::log.info "$DCSYSROOT/bin/dcsysfluviusd -h ${fluvius_hostname} ${dcsysfluviusd_args}"
 $DCSYSROOT/bin/dcsysfluviusd -h ${fluvius_hostname} ${dcsysfluviusd_args}
