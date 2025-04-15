@@ -1,3 +1,6 @@
+## 1.0.16
+- Bugfix
+  
 ## 1.0.14
 - Opkuis en bugfix
 
