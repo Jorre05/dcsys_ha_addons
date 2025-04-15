@@ -20,4 +20,5 @@ bashio::log.info "${ha_hostname:="dcsys.struyve.lan"}"
 
 #exec /usr/bin/my_program
 export DCSYSROOT=/etc/dcsys
+bashio::log.info "$DCSYSROOT/bin/dcsysbalanced ${dcsysbalanced_args}"
 $DCSYSROOT/bin/dcsysbalanced ${dcsysbalanced_args}
