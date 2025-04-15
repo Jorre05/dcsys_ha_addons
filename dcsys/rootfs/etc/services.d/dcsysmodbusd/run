@@ -19,5 +19,5 @@ dcsys_config_root_dir=$(bashio::config 'dcsys_config_root_dir')
 bashio::log.info "${inverter_hostname:="inverter.struyve.lan"}"
 
 #exec /usr/bin/my_program
-export DCSYSROOT=${dcsys_config_root_dir}/dcsys
+export DCSYSROOT=/etc/dcsys
 $DCSYSROOT/bin/dcsysmodbusd -h ${inverter_hostname} ${dcsysmodbusd_args}
