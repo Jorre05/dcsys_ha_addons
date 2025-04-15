@@ -17,5 +17,5 @@ dcsys_config_root_dir=$(bashio::config 'dcsys_config_root_dir')
 bashio::log.info "${fluvius_hostname:="fluvius.struyve.lan"}"
 
 #exec /usr/bin/my_program
-export DCSYSROOT=${dcsys_config_root_dir}/dcsys
+export DCSYSROOT=/etc/dcsys
 $DCSYSROOT/bin/dcsysfluviusd -h ${fluvius_hostname} ${dcsysfluviusd_args}
