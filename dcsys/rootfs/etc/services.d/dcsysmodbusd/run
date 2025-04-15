@@ -20,4 +20,5 @@ bashio::log.info "${inverter_hostname:="inverter.struyve.lan"}"
 
 #exec /usr/bin/my_program
 export DCSYSROOT=/etc/dcsys
+bashio::log.info "$DCSYSROOT/bin/dcsysmodbusd -h ${inverter_hostname} ${dcsysmodbusd_args}"
 $DCSYSROOT/bin/dcsysmodbusd -h ${inverter_hostname} ${dcsysmodbusd_args}
