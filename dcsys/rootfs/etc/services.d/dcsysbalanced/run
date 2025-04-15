@@ -19,5 +19,5 @@ dcsys_config_root_dir=$(bashio::config 'dcsys_config_root_dir')
 bashio::log.info "${ha_hostname:="dcsys.struyve.lan"}"
 
 #exec /usr/bin/my_program
-export DCSYSROOT=${dcsys_config_root_dir}/dcsys
+export DCSYSROOT=/etc/dcsys
 $DCSYSROOT/bin/dcsysbalanced ${dcsysbalanced_args}
