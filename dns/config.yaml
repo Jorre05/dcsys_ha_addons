@@ -1,5 +1,5 @@
 name: "DCSys DNS Server"
-version: "1.0.5"
+version: "1.1.0"
 slug: "dcsys-dns"
 description: "Home Assistant DNS add-on"
 url: "https://github.com/Jorre05/dcsys_ha_addons"
