@@ -17,6 +17,8 @@ mkdir -p ${dcsys_config_root_dir}
 bashio::log.info "DCSys configuratie is er niet, GIT clone"
 git clone ${github_repository} ${dcsys_config_root_dir}
 
+bashio::log.info  "Oude config wegsmijten"
+rm -fr /config/*
 cp -frp ${dcsys_config_root_dir}/dns/* /config
 sed "s/#LISTEN_ON#/${listen_on}/g" /config/named.conf -i
 
