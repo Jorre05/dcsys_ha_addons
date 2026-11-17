@@ -20,5 +20,6 @@ bashio::log.info "DCSys configuratie is er niet, GIT clone"
 git clone ${github_repository} ${dcsys_config_root_dir}
 
 cp -frp ${dcsys_config_root_dir}/dhcp/* /config
+ls -ltrh /config/*
 sed "s/#LISTEN_ON#/${listen_on}/g" /config/kea-dhcp4.conf -i
 sed "s/#DNS_SERVERS#/${dns_servers}/g" /config/kea-dhcp4.conf -i
